@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xpf.process_webview_library">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+        <activity
+            android:name="com.xpf.process_webview_library.WebActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <service
+            android:name=".JavaScriptService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+    </application>
+</manifest>
